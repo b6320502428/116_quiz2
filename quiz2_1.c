@@ -8,16 +8,24 @@ int main ()
         j=2;
         while(j*j*j<i)
         {
-            j++;
-            if(i%(j*j*j)!=0)
+            if(i%(j*j*j)==0)
             {
                 break;
             }
+            j++;
         }
         if(i%(j*j*j)!=0)
         {
             k++;
         }
+    }
+    if(n%(j*j*j)!=0)
+    {
+        printf("%d",k);
+    }
+    else
+    {
+        printf("Not Cube Free");
     }
     return 0;
 }
